@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class CurrencyAPIServiceImpl implements CurrencyAPIService {
     @Value("${currencyLayer.accessKey}")
     private String accessKey;
-    @Value("${currencyLayer.url")
+    @Value("${currencyLayer.url}")
     private String url;
     @Value("${currencyLayer.source}")
     private String source;
@@ -25,7 +25,7 @@ public class CurrencyAPIServiceImpl implements CurrencyAPIService {
 
     private RestTemplate restTemplate;
     private CurrencyDto currency;
-    private boolean check;
+
     public CurrencyAPIServiceImpl(RestTemplateBuilder restTemplateBuilder){
         restTemplate = restTemplateBuilder.build();
     }
