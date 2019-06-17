@@ -26,8 +26,8 @@
 2. 가져온 환율에 따라 송금액을 계산해서 보여주는 기능
 
 ## 시연 화면
-![Screenshot](./docs/sample1.png)
-![Screenshot](./docs/sample2.png)
+![Screenshot](./docs/sample1.PNG)
+![Screenshot](./docs/sample2.PNG)
 	
 
    
