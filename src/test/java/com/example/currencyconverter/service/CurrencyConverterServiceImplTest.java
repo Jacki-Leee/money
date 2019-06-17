@@ -22,7 +22,7 @@ public class CurrencyConverterServiceImplTest {
     public void 송금액_잘_가져왔는지_확인() {
         CurrencyDto currencies = currencyAPIService.getCurrency();
         Double currencyFromDirectAPI = currencies.getQuotes().get("USDPHP");
-        Double currencyFromConverterService = currencyConverterService.getCurrencyRate("USD", "PHP");
+        Double currencyFromConverterService = currencyConverterService.getCurrencyRate("PHP");
         Assert.assertEquals(currencyFromDirectAPI, currencyFromConverterService);
     }
 }
