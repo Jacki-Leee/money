@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.text.DecimalFormat;
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ public class CurrencyConverterAPIController {
 
     //송금액을 가져오는 메소드
     @PostMapping("/exchange-rates")
-    public ResponseEntity getSendAmount(@RequestBody  ConvertInfoDto convertInfo){
+    public ResponseEntity getSendAmount(@Valid  @RequestBody  ConvertInfoDto convertInfo){
 
         Double currency = currencyConverter.getCurrencyRate(convertInfo.getReceiveCountry());
         Double sendAmount = (currency * convertInfo.getSendAmount());

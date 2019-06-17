@@ -64,7 +64,7 @@
                 }
             })
         }
-        function isInvalidInput() {
+        function validCheck() {
             var amount = $('#send_amount').val();
             return (amount.length <= 0 || amount < 0 || amount > 10000);
         }
@@ -76,7 +76,7 @@
                 "receiveCountry" : receivingCountry,
                 "sendAmount" : sendAmount
             }
-            if (isInvalidInput()) {
+            if (validCheck()) {
                 $('#receiveResult').html("<div class=\"alert alert-danger\"><p>송금액이 바르지 않습니다.송금액은 0 ~ 10000 사이의 수를 입력하세요</p></div>");
                 return;
             }
